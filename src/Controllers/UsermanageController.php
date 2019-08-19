@@ -22,7 +22,12 @@ class UsermanageController extends Controller
       return view('usermanage::usermanage', ['users' => $users]);
 
     }
-
-
+    public function edit(Request $request){
+      $user = $request->user;
+      $decoded = \Crypt::decryptString($user);
+      $useObj = User::find($decoded);
+      return view('usermanage::useredit', ['user' => $useObj]);
+    }
+ 
 
 }
