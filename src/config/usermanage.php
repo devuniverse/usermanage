@@ -33,5 +33,17 @@ return [
       'head'   => 'css',
       'footer' => 'js',
       'usermanage_content'=>'content'
-  ]
+  ],
+
+  /*
+  |--------------------------------------------------------------------------
+  | perpage
+  |--------------------------------------------------------------------------
+  |
+  | When you list users, they are paged. Choose the number of users to display
+  | per page.
+  | It defaults to 20
+  |
+  */
+ 'perpage' => 20
 ];

@@ -18,7 +18,8 @@ class UsermanageController extends Controller
 
     }
     public function index(){
-      $users = User::paginate(1);
+      $perPage = Config::get('usermanage.perpage');
+      $users = User::paginate($perPage);
       return view('usermanage::usermanage', ['users' => $users]);
 
     }
@@ -28,6 +29,6 @@ class UsermanageController extends Controller
       $useObj = User::find($decoded);
       return view('usermanage::useredit', ['user' => $useObj]);
     }
- 
+
 
 }
