@@ -1,0 +1,35 @@
+{
+    "name": "devuniverse/usermanage",
+    "description": "A package to manage users",
+    "homepage": "https://github.com/devuniverse/usermanage",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "User Management",
+            "email": "ishimwe@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "Devuniverse\\Usermanage\\": "/src"
+        },
+        "files": [
+            "src/Support/helpers.php"
+        ]
+      },
+      "extra": {
+          "laravel": {
+              "providers": [
+                  "Devuniverse\\Usermanage\\UsermanageServiceProvider"
+              ]
+          }
+      },
+      "minimum-stability": "stable",
+      "require": {
+        "laravel/framework": "5.8.*"
+      },
+      "require-dev": {
+          "laravel/laravel": "5.8.*"
+    }
+}
