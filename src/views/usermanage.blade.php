@@ -13,6 +13,13 @@
   <!-- Container fluid  -->
   <!-- ============================================================== -->
   <div class="container-fluid">
+    <div class="module-actions-menu">
+      <ul>
+        <li><a href="/dashboard/users" class="btn btn-primary @if( !isset(\Request()->action) )  btn-success  @endif btn-lg"> <i class="fas fa-clipboard-list"></i>View all</a></li>
+        <li><a href="/dashboard/users/add" class="btn btn-primary @if( isset(\Request()->action) && \Request()->action == 'add' )  btn-success @endif btn-lg"> <i class="fas fa-plus-circle"></i>Add New</a></li>
+      </ul>
+    </div>
+
       @if($luser->userCan('list_settings'))
 
         @include('usermanage::partials.listusers', ['users' => $users ])
